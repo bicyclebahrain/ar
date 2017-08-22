@@ -5,161 +5,255 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+
 <style>
-body,h1,h2{font-family: 'Cairo', sans-serif;}
-body, html {height: 100%}
-p {line-height: 2}
-.bgimg, .bgimg2, .bgimg3, .bgimg4,.bgimg5 {
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-.bgimg {background-image: url("src/img/bikeart.jpg")}
-.bgimg2 {background-image: url("src/img/geet3.jpg")}
-.bgimg3 {background-image: url("src/img/bikeold.jpg")}
-.bgimg4 {background-image: url("src/img/fa.jpg")}
-.bgimg5 {background-image: url("src/img/order.jpg")}
+
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: 'Cairo', sans-serif; font-size: 20px; line-height: 1.75;}
+h3 {margin: 0;}
+p {font-size: 15px; color:gray; margin-bottom: 5px; margin-top: 0;}
+strong {font-size: 18px;}
+.w3-bar-block .w3-bar-item {padding:20px}
+.price {margin-bottom:20px;}
+p span {background-color: #ff0; color: black;}
+ul {font-size: 18px; margin: 0;}
+
+.mySlides2 {display:none;}
 </style>
 <body>
 
-<!-- Header / Home-->
-<header class="w3-display-container bgimg w3-grayscale-min" id="home">
-  <div class="w3-display-topright w3-padding" lang="en" dir="ltr" style="color:white;"><a href="https://bicyclebahrain.github.io/en/" style="text-decoration:none;"><b>English?</b></a></div>
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">
 
-أوراق
-    <span class="w3-jumbo"  dir="ltr">Bicycle<sup style="font-size:25px;vertical-align:middle;">&reg;</sup></span>
 
-    </h1>
-    <h2>في البحرين</h2>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card-2 w3-top w3-xlarge w3-animate-right" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">أغلق القائمة</a>
+  <a href="#products" onclick="w3_close()" class="w3-bar-item w3-button">المنتجات</a>
+  <a href="#order" onclick="w3_close()" class="w3-bar-item w3-button">الطلب</a>
+  <a href="#delivery" onclick="w3_close()" class="w3-bar-item w3-button">التوصيل</a>
+  <a href="#faq" onclick="w3_close()" class="w3-bar-item w3-button">الأسئلة</a>
+  <a dir="ltr" lang="en" href="https://bicyclebahrain.github.io/en/" onclick="w3_close()" class="w3-bar-item w3-button">English Website</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-right" onclick="w3_open()">☰</div>
+    <a class="w3-button w3-padding-16 w3-left"  href="https://bicyclebahrain.github.io/en/" onclick="w3_open()" dir="ltr" lang="en" style="font-size:16px; font-weight:bold; padding-right:0;">English?</a>
+    <div class="w3-center w3-padding-16">بايسكل&reg; البحرين</div>
+  </div>
+</div>
+<div style="min-height:100px;"></div>
+
+<div class="w3-content w3-padding w3-center" style="max-width:900px;">
+  <div class="mySlides2 w3-container w3-red" style="height:130px;">
+    <h1 style="padding-top:4px;"><b>مسابقة على الانستجرام!</b></h1>
+    <h1>اربح أوراق مجانا<br>bicyclebh@</h1>
+  </div>
+
+  <div class="mySlides2 w3-container w3-blue" style="height:130px;">
+    <h1>  أنواع جديدة</h1>
+    <h1>عروض جديدة وهدايا</h1>
+    <h1><i>&darr;</i></h1>
 
   </div>
-  <h2 class="w3-display-bottommiddle"><b style="color:white; font-size:35px;">&darr;</b></h2>
-</header>
 
-<!-- About / Jane And John -->
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
-  <div class="w3-content">
-    <h1 class="w3-center w3-text-grey"><b>المنتجات المتوفرة</b></h1>
-    <p class="w3-center w3-text-grey">الكمية محدودة</p>
-    <div class="w3-row-padding w3-center">
-    <div class="w3-half w3-container">
-      <h2>أوراق <sup style="font-size:20px;">&reg;</sup>Bicycle <br><b style="color: hsla(0, 100%, 64%, 0.97);">أحمر</b> ستاندرد</h2>
-      <img src="src/img/redback.jpg" class="w3-round w3-image" width="300" style="border: 2px solid grey;">
-      <p style="font-size:20px;"><b>3.5 دب</b></p>
+  <div class="mySlides2 w3-container w3-green" style="height:130px;">
+    <h1><b>اسعار ارخص</b></h1>
+    <h1>توصيل مخفض ومجاني</h1>
+    <h1>&darr;</h1>
+
+
+  </div>
+
+
+</div>
+<!-- !PAGE CONTENT! -->
+<div id="products" class="w3-main w3-content w3-padding w3-center" style="max-width:900px;margin-top:20px;">
+<h5 style="margin-top:0; padding-top:0; padding-bottom:5px;"><b>المنتجات</b></h5>
+  <!-- First Photo Grid-->
+
+    <div class="w3-mobile" style="margin-bottom:10px;">
+      <img src="img/redstandard.png" alt="Sandwich" style="width:100%">
+      <h3>أوراق باسكل&reg; أحمر ستاندرد</h3>
+          <p><span>هدية: ورقة دبل باك للسحر </span></p>
+          <h3 class="price"><strong>3.5 دب</strong></h3>
     </div>
-    <div class="w3-half w3-container">
-      <div style="height:30px;" class="w3-container w3-hide-medium w3-hide-large"></div>
-      <h2>أوراق <sup style="font-size:20px;">&reg;</sup>Bicycle <br><b style="color: rgba(62, 66, 255, 0.97);">أزرق</b> ستاندرد</h2>
-        <img src="src/img/blueback.jpg" class="w3-round w3-image" width="300" style="border: 2px solid grey;">
-        <p style="font-size:20px;"><b>3.5 دب</b></p>
+
+    <div class="w3-mobile" style="margin-bottom:20px;">
+      <img src="img/bluestandard.png" alt="Steak" style="width:100%">
+        <h3>أزرق باسكل&reg; أوراق ستاندرد</h3>
+      <p><span>هدية: ورقة دبل باك للسحر </span></p>
+  <h3 class="price"><strong>3.5 دب</strong></h3>
     </div>
+    <div class="w3-mobile" style="margin-bottom:10px;">
+      <img src="img/special1.png" alt="Steak" style="width:100%">
+      <h3>قطعتين (أحمر+أزرق)</h3>
+   <p><span>هدية: ورقتين دبل باك للسحر </span></p>
+
+<h3 class="price" style="line-height:12px; margin-top:13px !important;"><p>عرض التوفير!</p><strong style="text-decoration:line-through;">7 دب</strong> <strong>6 دب</strong></h3>
+    </div>
+
+    <div class="w3-mobile">
+      <h5 style="color:#796f6f;">
+        - الأوراق الحصرية -
+      </h5>
+    </div>
+    <div class="w3-mobile" style="margin-bottom:10px;">
+
+      <div class="w3-display-container">
+      <img src="img/blackstandard.jpg" alt="Steak" style="width:96.7%" class="w3-border">
+      <div class="w3-display-middle" style="background-color:#b79c6a; color:white; font-size:30px; padding:5px;">انتهت الكمية</div>
+      </div>
+      <h3>أوراق بايسكل&reg; أسود خاص</h3>
+        <p style="line-height:1;">اللون الأسود النادر</p>
+      <h3 class="price"><strong>5 دب</strong></h3>
+    </div>
+    <div class="w3-mobile" style="margin-bottom:20px;">
+      <img src="img/golddragon.jpg" alt="Steak" style="width:100%" class="w3-border">
+      <h3>أوراق بايسكل&reg; دراجون باك الذهبي</h3>
+
+     <p style="line-height:1;">تصميم دراجون باك الكلاسيكي</p>
+ <p style="line-height:1;">تأتي مع ورقة دبل باك داخل العلبة</p>
+
+
+      <h3 class="price"><strong>6 دب</strong></h3>
+    </div>
+
+    <div class="w3-mobile">
+  <h5 style="color:#796f6f;">
+    - الأوراق النادرة الخاصة -
+  </h5>
   </div>
-  <div class="w3-container w3-center" style="margin-top:30px;">
-    <h2>أوراق <sup style="font-size:20px;">&reg;</sup>Bicycle <br> خاص <b style="color: black;">أسود</b></h2>
+  <!-- Second Photo Grid-->
 
-  <img src="src/img/blackback.jpg" class="w3-display-container w3-round w3-image" width="300" style="border: 2px solid grey;">
-<p style="font-size:20px;"><b>5 دب</b></p>
-  </div>
+    <div class="w3-mobile" style="margin-bottom:10px;">
 
-    <p style="margin-top:60px;" class="w3-center"><a href="#prices" class="w3-button w3-black w3-round w3-padding-large w3-large">الأسعار والعروض</a></p>
-  </div>
-</div>
+      <img src="img/utopia.jpg" alt="Steak" style="width:100%" class="w3-border">
+      <h3 style="line-height:1;">BICYCLE&reg; UTOPIA WHITE GOLD</h3>
+      <h3 style="line-height:1;">بايسكل&reg; يوتوبيا الذهبي الأبيض</h3>
+      <ul style="text-align:right; margin-top:4px;">
+        <li>  <p>مصنوع على أوراق ®Bee الفاخرة</p></li>
+        <li style="line-height:1.3;"> <p><span>Magic Finish</span> تحكم استثنائي بالورق للسحر والاستعراض</p></li>
+        <li style="line-height:1;">  <p>تأتي مع ورقة دبل باك داخل العلبة</p></li>
+        <li style="line-height:1;">  <p> مطبوع باستعمال حبر ميتالك</p></li>
+      <li style="line-height:1;">  <p>تصميم خاص ومختلف لأوجه الورق</p></li>
+      <li style="line-height:1;">  <p> مطبوعة من قبل شركة الولايات المتحدة الأمريكية لألعاب الورق</p></li>
+      <li style="line-height:1;">  <p>احصل عليها سريعا! يوجد واحدة فقط</p></li>
+      </ul>
 
-<!-- Background photo -->
-<div class="w3-display-container bgimg2 w3-grayscale-min">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo"style="border-radius:7px; background-color:white; color:black; padding:30px; letter-spacing:-1px;">احصل عليها!</h1><br>
+      <a style="color:#0000EE; font-size:18px;text-decoration: underline;cursor:pointer;" onclick="openModal();currentDiv(1)">رؤية الصور</a>
+      <h3 class="price"><strong>7.5 دب</strong></h3>
+    </div>
 
-  </div>
-</div>
+    <div class="w3-container">
 
-<!-- Wedding information -->
-<div class="w3-container w3-display-container w3-padding-64 w3-pale-red w3-grayscale-min" id="prices">
-  <div class="w3-display-bottomleft" style="color:grey; padding-bottom:5px; padding-left:5px;"><a href="#delivery" style="text-decoration:none;">التوصيل &darr;</a></div>
-  <h1 class="w3-center w3-text-grey" style="margin-bottom:0px;"><b>الأسعار الأساسية والعروض الخاصة</b></h1>
-  <p style="margin-top: 0 !important; margin-bottom:50px;" class="w3-center">بأسعار مخفضة </p>
-  <div class="w3-content">
-  <style>
-  .w3-bordered tr, .w3-table-all tr
-  {border-bottom: 1px solid #cecece;}
-  </style>
-      <table class="w3-table  w3-bordered w3-centered">
-        <tr>
-          <th>المنتج</th>
-          <th>السعر</th>
-        </tr>
-        <tr>
-          <td>حبة واحدة<br>ستاندرد أحمر</td>
-          <td><b>3.5 دب</b> <br>ثلاثة دينار و500 فلس </td>
+    <div id="myModal" class="w3-modal w3-black">
+     <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal()" style="cursor:pointer">×</span>
+     <div class="w3-modal-content">
 
-        </tr>
+      <div class="w3-content" style="max-width:1200px">
+       <img class="mySlides" src="img/utopiafull.jpg" style="width:100%">
+       <img class="mySlides" src="img/utopia1.jpg" style="width:100%">
+       <img class="mySlides" src="img/utopia2.jpg" style="width:100%">
+       <div class="w3-row w3-black w3-center">
+        <div class="w3-display-container">
+         <p id="caption"></p>
 
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="img/utopiafull.jpg" style="width:100%" onclick="currentDiv(1)">
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="img/utopia1.jpg" style="width:100%" onclick="currentDiv(2)">
+        </div>
+        <div class="w3-col s4">
+         <img class="demo w3-opacity w3-hover-opacity-off" src="img/utopia2.jpg" style="width:100%" onclick="currentDiv(3)">
+        </div>
+       </div> <!-- End row -->
+      </div> <!-- End w3-content -->
 
-        <tr>
-         <td>حبة واحدة<br>ستاندرد أزرق</td>
-          <td><b>3.5 دب</b> <br>ثلاثة دينار و500 فلس </td>
-        </tr>
-        <tr>
-          <td>حبة واحدة<br>أسود خاص <b>&#42</b></td>
-          <td><b>5 دب </b> <br>خمسة دينار</b></td>
-        </tr>
-        <tr><td class="w3-center" colspan="2"><b>العروض الخاصة</b></td></tr>
-        <tr>
-          <td><b>حبتين</b><br>(حبة أزرق + حبة أحمر)</td>
-            <td><b style="text-decoration: line-through;">7 دب</b><br><b>6 دب</b> <br>ستة دينار</td>
+     </div> <!-- End modal content -->
+    </div> <!-- End modal -->
 
-        </tr>
+    </div>
 
 
-        <tr>
-          <td><b>حبتين</b> (6.5 دب)<br>+<br><b>حبة واحدة أسود<br class="w3-hide-medium w3-hide-large"></b> (5 دب)<br>(حبة أسود +<br class="w3-hide-medium w3-hide-large"> حبة أحمر + حبة أزرق)</td>
-        <td style="padding-top:19px;"><b style="text-decoration: line-through;"><br class="w3-hide-medium w3-hide-large">11.5 دب</b><br><b>10 دب</b><br>عشرة دينار</td>
-        </tr>
-      </table>
-<p style="line-height:20px;"><b>&#42</b>متوفر  <b>حبة واحدة</b> فقط من النوع الأسود. </p>
+    <div class="w3-mobile" style="margin-bottom:20px;">
 
-  </div>
-</div>
+      <img src="img/asura.png" alt="Steak" style="width:100%" class="w3-border">
+      <h3 style="line-height:1;">Bicyle&reg; ASURA: BLACK EDITION</h3>
+      <h3 style="line-height:1; margin-bottom:4px;">بايسكل&reg; اسورا: الأصدار الأسود</h3>
+      <ul style="text-align:right;">
+        <li style="line-height:1;">  <p>مصنوع على ورق ®Aristocrat الفاخر</p></li>
+        <li style="line-height:1;">  <p>حبر أسود وفضي ميتالك</p></li>
+         <li style="line-height:1.3;"> <p><span>Magic Finish</span> تحكم استثنائي بالورق للسحر والاستعراض</p></li>
+        <li style="line-height:1;">  <p>تأتي مع ورقة دبل باك داخل العلبة</p></li>
+          <li style="line-height:1;">  <p>تصميم خاص ومختلف للايس والجوكر الرموز</p></li>
+      <li style="line-height:1;">  <p> مطبوعة من قبل شركة الولايات المتحدة الأمريكية لألعاب الورق</p></li>
+      <li style="line-height:1;">  <p>احصل عليها سريعا! يوجد واحدة فقط</p></li>
+      </ul>
 
-<div class="w3-display-container bgimg3 w3-grayscale-min">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo"style="border-radius:7px; background-color:rgba(255, 175, 175, 0.84); padding:30px;">التوصيل</h1><br>
-  </div>
-</div>
-
-<div class="w3-container w3-display-container w3-padding-64 w3-pale-red w3-grayscale-min" id="delivery">
-  <div class="w3-display-bottomleft" style="color:grey; padding-bottom:5px; padding-left:5px;"><a href="#order" style="text-decoration:none;">الطلب &darr;</a></div>
-  <h1 class="w3-center w3-text-grey" style="margin-bottom:40px;"><b>كيفية التوصيل</b></h1>
-  <div class="w3-content w3-large">
-    <p>تكلفة التوصيل <b>1 دب</b>. بالطبع يمكنك استلامها بنفسك <b>مجانا</b>.</p>
-       <p>التوصيل فقط للأماكن المعروفة في كل مدينة من مدن البحرين (المجمعات, الحدائق, المحطات ... ).</p>
-
-       <div>
-           <p style="margin-bottom:0px;">لاستلامها بنفسك:
-               <ul style="margin-top:0px;">
-                 <li>االمكان : <strong>المحرق</strong></li>
-                 <li><a href="https://goo.gl/maps/UhFYxfQbqR62" style="text-decoration:none; color:#0000EE;">الموقع على Google Maps</a> &#x2196; </li>
-                 <li>الوصف: مقابل برادات وصيدلية رويان (فرع المحرق) - بجانب مدرسة الهداية الخليفية - تبعد شارع عن مستشفى الملك حمد [ايضا بجانب مجمع الواحة المحرق].</li>
-               </ul>
-           </p>
-           </div>
-
-  </div>
-</div>
+      <a style="color:#0000EE; font-size:18px;text-decoration: underline;cursor:pointer;" onclick="openModal1();currentDiv1(1)">رؤية الصور</a>
+      <h3 class="price"><strong>8.5 دب</strong></h3>
 
 
-<div class="w3-display-container bgimg5 w3-grayscale-min">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo"style="border-radius:7px; background-color:rgba(125, 71, 71, 0.47); padding:30px;">الطلب</h1><br>
-  </div>
-</div>
+      <p class="w3-mobile" style="color:black; line-height:15px; font-size:14px;">
+        <strong style="font-size:14px;">تخفيض</strong> يوتوبيا الذهبي الأبيض + اسورا الأسود <strong style="text-decoration:line-through; font-size:14px;">16 دب</strong><br><strong style="font-size:14px;">15 دب وتوصيل مجاني</strong>
+      </p>
+    </div>
 
-<div class="w3-container w3-display-container w3-padding-64 w3-pale-red w3-grayscale-min" id="order">
-   <div class="w3-display-bottomleft" style="color:grey; padding-bottom:5px; padding-left:5px;"><a href="#faq" style="text-decoration:none;">معلومات &darr;</a></div>
-  <h1 class="w3-center w3-text-grey" style="margin-bottom:40px;"><b>كيفية الطلب؟</b></h1>
-  <div class="w3-content w3-large" style="max-width:500px">
+        <div class="w3-container">
+
+        <div id="myModal1" class="w3-modal w3-black">
+         <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal1()" style="cursor:pointer">×</span>
+         <div class="w3-modal-content">
+
+          <div class="w3-content" style="max-width:1200px">
+           <img class="mySlides1" src="img/asurafull.png" style="width:100%">
+           <img class="mySlides1" src="img/asura1.jpg" style="width:100%">
+           <img class="mySlides1" src="img/asura2.jpg" style="width:100%">
+           <img class="mySlides1" src="img/asura3.jpg" style="width:100%">
+           <img class="mySlides1" src="img/asura4.jpg" style="width:100%">
+           <img class="mySlides1" src="img/asura5.jpg" style="width:100%">
+           <div class="w3-row w3-black w3-center">
+            <div class="w3-display-container">
+             <p id="caption1"></p>
+
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asurafull.png" style="width:100%" onclick="currentDiv1(1)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura1.jpg" style="width:100%" onclick="currentDiv1(2)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura2.jpg" style="width:100%" onclick="currentDiv1(3)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura3.jpg" style="width:100%" onclick="currentDiv1(4)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura4.jpg" style="width:100%" onclick="currentDiv1(5)">
+            </div>
+            <div class="w3-col s2">
+             <img class="demo1 w3-opacity w3-hover-opacity-off" src="img/asura5.jpg" style="width:100%" onclick="currentDiv1(6)">
+            </div>
+           </div> <!-- End row -->
+          </div> <!-- End w3-content -->
+
+         </div> <!-- End modal content -->
+        </div> <!-- End modal -->
+
+        </div>
+
+  <hr id="order">
+
+  <!-- About Section -->
+  <div class="w3-container w3-center">
+    <h3><b>كيفية الطلب؟</b></h3><br>
+
+      <div class="w3-content w3-right-align w3-large" style="max-width:500px">
+
 
 ببساطة,
 <br> عبر الدايركت في انستجرام
@@ -168,43 +262,171 @@ p {line-height: 2}
 <div class="w3-center">&larr; <a href="https://twitter.com/bicyclebh" style="text-decoration: none; color:#0000EE;" dir="ltr">@bicyclebh</a></div>
 <br> أو عبر الايميل
 <div class="w3-center">bicyclebahrain@gmail.com</div>
-
+    </div>
   </div>
-</div>
+  <hr id="delivery">
+  <div class="w3-container w3-center">
+    <h3><b>التوصيل</b></h3><br>
 
-<div class="w3-display-container bgimg4 w3-grayscale-min">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo w3-wide"style="border-radius:7px; background-color:white; color:black; padding:30px; letter-spacing:-1px;">معلومات</h1><br>
-  </div>
-</div>
+      <div class="w3-content w3-right-align w3-large" style="max-width:500px">
 
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-right-align" id="faq">
-  <h1 class="w3-center w3-text-grey" style="margin-bottom:40px;"><b>الأسئلة الأكثر تكرارا</b></h1>
-  <div class="w3-content" style="max-width:380px">
-    <p class="w3-large" style="margin-bottom:0;"><b>هل هذه أصلية؟</b></p>
-    <p style="margin-top:0;">نعم! مصنعة ومطبوعة من <b>USPCC</b><br>- The United States Playing Card Company -<br>الشركة الأم المصنعة لـBicycle.<br>بالـ<b>Air-Cushion Finish</b><br>مستوردة من الولايات المتحدة الأمريكية.</p>
+        <div class="w3-content">
+           <div style="margin-bottom:9px;">تكلفة التوصيل <b>1 دب</b>. بالطبع يمكنك استلامها بنفسك <b>مجانا</b>.</div>
+          <div style="margin-bottom:9px;"><b>[التوصيل المخفض]</b> تكلفة التوصيل <b>500 فلس</b> للطلبات بقيمة 10 ديار وأزيد.</div>
+          <div style="margin-bottom:9px;"><b>[التوصيل مجانا]</b> للطلبات بقيمة 15 دينار وأزيد.</div>
+          <div style="margin-bottom:9px;">التوصيل فقط للأماكن المعروفة في كل مدينة من مدن البحرين (المجمعات, الحدائق, المحطات ... ).</div>
+      <div>
+           <div>
+           <div style="margin-bottom:0px;">لاستلامها بنفسك:
+               <ul style="margin-top:0px;">
+                 <li>االمكان : <strong>المحرق</strong></li>
+                 <li><a href="https://goo.gl/maps/UhFYxfQbqR62" style="text-decoration:none; color:#0000EE;">الموقع على Google Maps</a> &#x2196; </li>
+                 <li>الوصف: مقابل برادات وصيدلية رويان (فرع المحرق) - بجانب مدرسة الهداية الخليفية - تبعد شارع عن مستشفى الملك حمد [ايضا بجانب مجمع الواحة المحرق].</li>
+               </ul>
+           </div>
+           </div>
+          </div>
+        </div>
+    </div>
 
-<p class="w3-large" style="margin-bottom:0;"><b>هل هذه الأوراق جديدة أم مستعملة؟</b></p>
-<p style="margin-top:0;">جديدة! كل المنتجات المتوفرة جديدة بالكامل وغير مفتوحة وعليها ختم الإغلاق الأصلي للشركة.</p>
-
-<p class="w3-large" style="margin-bottom:0;"><b>هل يجب علي تحديد العروض الخاصة عند الطلب؟</b></p>
-<p style="margin-top:0;">كلا. سيتم احتساب أسعار العروض إذا استوفت حتى لو لم يحددها البائع في طلبة. <b>مثال:</b>  إذا قمت بطلب 3 حبات أحمر و3 حبات أزرق سيتم احتساب كل اثنين بعرض حبتين المخفض وليس ثمن 6 حبات منفردة بسعر الحبة الأساسي.</p>
-
-<p class="w3-large" style="margin-bottom:0;"><b>هل يمكن طلب حبتين من نفس اللون بسعر العرض؟</b></p>
-<p style="margin-top:0;">للأسف لا يمكن ذلك حاليا لمحدودية الكمية, عرض الحبتين يطبق فقط على الألوان المختلفة (أحمر + أزرق) طلب العديد من نفس اللون سيحتسب بالسعر الأساسي المنفرد للحبة الواحدة, هذا للابقاء على كمية متوازنة من اللونين متوفرة لكم.</p>
 
 <br>
+
+  </div>
+<hr id="faq">
+<div class="w3-container w3-center">
+  <h3><b>الاسئلة</b></h3><br>
+      <div class="w3-content w3-right-align w3-large" style="max-width:500px">
+
+<div><b>هل هذه أصلية؟</b></div>
+<div style="margin-bottom:15px;">نعم! مصنعة ومطبوعة من <b>USPCC</b> - The United States Playing Card Company - الشركة الأم المصنعة لـBicycle.<br>بالـ<b>Air-Cushion Finish</b><br>مستوردة من الولايات المتحدة الأمريكية.</div>
+
+<div><b>هل هذه الأوراق جديدة أم مستعملة؟</b></div>
+<div style="margin-bottom:15px;">جديدة! كل المنتجات المتوفرة جديدة بالكامل وغير مفتوحة وعليها ختم الإغلاق الأصلي للشركة.</div>
+
+<div><b>هل يجب علي تحديد العروض الخاصة عند الطلب؟</b></div>
+<div style="margin-bottom:5px;">كلا. سيتم احتساب أسعار العروض إذا استوفت حتى لو لم يحددها البائع في طلبة. <b>مثال:</b>  إذا قمت بطلب 3 حبات أحمر و3 حبات أزرق سيتم احتساب كل اثنين بعرض حبتين المخفض وليس ثمن 6 حبات منفردة بسعر الحبة الأساسي.</div>
+ </div></div>
+<!-- End page content -->
+
+<hr>
+<div class="w3-container w3-center">
+  <div class="w3-container">
+    <h1>أوقات سعيدة!</h1>
+    <div class="w3-large" style="margin-bottom:5px;">للاستفسار يرجى التواصل على</div>
+<div class="w3-wide">   <a style="margin-bottom:5px; text-decoration:none;" href="https://www.instagram.com/bicyclebh">bicyclebh@</a></div>
+    <a href="https://bicyclebahrain.github.io/en/">الموقع الانجليزي</a><br><br>
   </div>
 </div>
-
-<!-- RSVP section -->
-<div class="w3-container w3-padding-64 w3-pale-red w3-center">
-  <h1>أوقات سعيدة!</h1>
-  <p class="w3-large">للاستفسار يرجى التواصل على</p>
-  <p dir="ltr">@bicyclebh</p>
-<a href="https://bicyclebahrain.github.io/en/">English Site</a>
 </div>
 
+<script>
+function openModal1() {
+  document.getElementById('myModal1').style.display = "block";
+}
+
+function closeModal1() {
+  document.getElementById('myModal1').style.display = "none";
+}
+
+var slideIndex = 1;
+showDivs1(slideIndex);
+
+function plusDivs1(n) {
+  showDivs1(slideIndex += n);
+}
+
+function currentDiv1(n) {
+  showDivs1(slideIndex = n);
+}
+
+function showDivs1(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides1");
+  var dots = document.getElementsByClassName("demo1");
+  var captionText = document.getElementById("caption1");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
+</script>
 
 </body>
 </html>
